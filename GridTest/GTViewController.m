@@ -58,7 +58,8 @@
 }
 
 - (IBAction)redrawButton:(UIButton *)sender {
-    self.Table.redraw=YES;
+    // force redraw
+    [self.Table setRedraw:YES];
 }
 
 - (void)didReceiveMemoryWarning
