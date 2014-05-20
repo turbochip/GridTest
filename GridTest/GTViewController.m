@@ -57,6 +57,9 @@
     return _tgrid;
 }
 
+- (IBAction)redrawButton:(UIButton *)sender {
+    self.Table.redraw=YES;
+}
 
 - (void)didReceiveMemoryWarning
 {

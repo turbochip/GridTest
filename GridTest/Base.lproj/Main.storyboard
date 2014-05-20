@@ -21,13 +21,25 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UI2-bC-mhB">
+                                <rect key="frame" x="20" y="518" width="53" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Redraw">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="redrawButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="5ZY-R9-GTn"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="UI2-bC-mhB" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="KoJ-hs-gTN"/>
                             <constraint firstItem="aqx-II-D7O" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" symbolic="YES" id="L4N-to-asb"/>
                             <constraint firstAttribute="trailing" secondItem="aqx-II-D7O" secondAttribute="trailing" constant="20" symbolic="YES" id="LcD-fs-i6N"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="aqx-II-D7O" secondAttribute="bottom" constant="236" id="d9n-9q-NBV"/>
                             <constraint firstItem="aqx-II-D7O" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="20" symbolic="YES" id="r7R-9Q-X8R"/>
+                            <constraint firstAttribute="bottom" secondItem="UI2-bC-mhB" secondAttribute="bottom" constant="20" symbolic="YES" id="rHz-My-Uyi"/>
                         </constraints>
                     </view>
                     <connections>
