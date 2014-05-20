@@ -26,11 +26,10 @@
     self.tgrid.size=CGSizeMake(self.Table.bounds.size.width,self.Table.bounds.size.height);
     
     // minimum number of cards needed is 15
-    self.tgrid.minimumNumberOfCells=15;
+    self.tgrid.minimumNumberOfCells=49;
     
     // 3/2 aspect ratio  3 high to 2 wide.
     self.tgrid.cellAspectRatio=2.0/3.0;
-    
     
     // ok for each cell create a subview and set the background color.
     for(int i=0;i<self.tgrid.rowCount;i++)
