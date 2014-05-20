@@ -25,7 +25,7 @@
     //set size to the size of the table bounds.
     self.tgrid.size=CGSizeMake(self.Table.bounds.size.width,self.Table.bounds.size.height);
     
-    // minimum number of cards needed is 12
+    // minimum number of cards needed is 15
     self.tgrid.minimumNumberOfCells=15;
     
     // 3/2 aspect ratio  3 high to 2 wide.
