@@ -21,6 +21,8 @@
 		F1F2258D192ABB2A00C06FE0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1F2256F192ABB2A00C06FE0 /* UIKit.framework */; };
 		F1F22595192ABB2A00C06FE0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F1F22593192ABB2A00C06FE0 /* InfoPlist.strings */; };
 		F1F22597192ABB2A00C06FE0 /* GridTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F1F22596192ABB2A00C06FE0 /* GridTestTests.m */; };
+		F1F225A2192ABB5A00C06FE0 /* GTGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = F1F225A1192ABB5A00C06FE0 /* GTGridView.m */; };
+		F1F225A5192ABC3900C06FE0 /* Grid.m in Sources */ = {isa = PBXBuildFile; fileRef = F1F225A4192ABC3900C06FE0 /* Grid.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,10 @@
 		F1F22592192ABB2A00C06FE0 /* GridTestTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GridTestTests-Info.plist"; sourceTree = "<group>"; };
 		F1F22594192ABB2A00C06FE0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F1F22596192ABB2A00C06FE0 /* GridTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GridTestTests.m; sourceTree = "<group>"; };
+		F1F225A0192ABB5A00C06FE0 /* GTGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTGridView.h; sourceTree = "<group>"; };
+		F1F225A1192ABB5A00C06FE0 /* GTGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTGridView.m; sourceTree = "<group>"; };
+		F1F225A3192ABC3900C06FE0 /* Grid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Grid.h; sourceTree = "<group>"; };
+		F1F225A4192ABC3900C06FE0 /* Grid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Grid.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,12 +118,11 @@
 		F1F22571192ABB2A00C06FE0 /* GridTest */ = {
 			isa = PBXGroup;
 			children = (
-				F1F2257A192ABB2A00C06FE0 /* GTAppDelegate.h */,
-				F1F2257B192ABB2A00C06FE0 /* GTAppDelegate.m */,
 				F1F2257D192ABB2A00C06FE0 /* Main.storyboard */,
 				F1F22580192ABB2A00C06FE0 /* GTViewController.h */,
 				F1F22581192ABB2A00C06FE0 /* GTViewController.m */,
-				F1F22583192ABB2A00C06FE0 /* Images.xcassets */,
+				F1F225A0192ABB5A00C06FE0 /* GTGridView.h */,
+				F1F225A1192ABB5A00C06FE0 /* GTGridView.m */,
 				F1F22572192ABB2A00C06FE0 /* Supporting Files */,
 			);
 			path = GridTest;
@@ -127,6 +132,11 @@
 			isa = PBXGroup;
 			children = (
 				F1F22573192ABB2A00C06FE0 /* GridTest-Info.plist */,
+				F1F2257A192ABB2A00C06FE0 /* GTAppDelegate.h */,
+				F1F225A3192ABC3900C06FE0 /* Grid.h */,
+				F1F225A4192ABC3900C06FE0 /* Grid.m */,
+				F1F22583192ABB2A00C06FE0 /* Images.xcassets */,
+				F1F2257B192ABB2A00C06FE0 /* GTAppDelegate.m */,
 				F1F22574192ABB2A00C06FE0 /* InfoPlist.strings */,
 				F1F22577192ABB2A00C06FE0 /* main.m */,
 				F1F22579192ABB2A00C06FE0 /* GridTest-Prefix.pch */,
@@ -250,9 +260,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1F225A5192ABC3900C06FE0 /* Grid.m in Sources */,
 				F1F22578192ABB2A00C06FE0 /* main.m in Sources */,
 				F1F22582192ABB2A00C06FE0 /* GTViewController.m in Sources */,
 				F1F2257C192ABB2A00C06FE0 /* GTAppDelegate.m in Sources */,
+				F1F225A2192ABB5A00C06FE0 /* GTGridView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

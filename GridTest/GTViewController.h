@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GTGridView.h"
 
 @interface GTViewController : UIViewController
+@property (weak, nonatomic) IBOutlet GTGridView *Table;
 
 @end
