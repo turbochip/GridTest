@@ -10,6 +10,7 @@
 #import "Grid.h"
 
 @interface GTGridView : UIView
-@property (nonatomic,strong) NSMutableArray * cell;
 @property (nonatomic) BOOL redraw;
+@property (nonatomic) NSInteger row;
+@property (nonatomic) NSInteger col;
 @end

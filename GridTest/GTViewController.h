@@ -10,6 +10,7 @@
 #import "GTGridView.h"
 
 @interface GTViewController : UIViewController
-@property (weak, nonatomic) IBOutlet GTGridView *Table;
+@property (weak, nonatomic) IBOutlet UIView *Table;
+@property (nonatomic,strong) NSMutableArray *cell;
 
 @end

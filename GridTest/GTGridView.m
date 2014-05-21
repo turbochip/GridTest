@@ -27,14 +27,20 @@
 - (void)drawRect:(CGRect)rect
 {
     // Drawing code
-    int i=0;  // using I to alternate grid background color
-    for(UIView *tcell in self.cell)
-    {
-        if(i & 1)  //do even odd thing.
-            tcell.backgroundColor=[UIColor blueColor];
-        i++;
-    }
+    UIBezierPath *path=[UIBezierPath bezierPathWithRoundedRect:rect cornerRadius:12.0];
     [self setClipsToBounds:YES];
+    if(self.row+self.col & 1)
+        self.backgroundColor=[UIColor blueColor];
+    else
+        self.backgroundColor=[UIColor greenColor];
+    
+    [self.backgroundColor setFill];
+//        if(i & 1)  //do even odd thing.
+  //          tcell.backgroundColor=[UIColor blueColor];
+    
+    [path setLineWidth:2];
+    [path fill];
+    [path stroke];
 }
 
 - (void) setRedraw:(BOOL)newredraw
@@ -43,10 +49,5 @@
     [self setNeedsDisplay];
 }
 
-- (NSMutableArray *) cell
-{
-    if(!_cell) _cell=[[NSMutableArray alloc] init];
-    return _cell;
-}
 
 @end
