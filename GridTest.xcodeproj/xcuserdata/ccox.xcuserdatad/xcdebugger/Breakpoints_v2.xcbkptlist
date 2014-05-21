@@ -89,13 +89,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "GridTest/GTGridView.m"
-            timestampString = "422242002.904259"
+            filePath = "GridTest/GTViewController.m"
+            timestampString = "422333610.794383"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "33"
             endingLineNumber = "33"
-            landmarkName = "-drawRect:"
+            landmarkName = "-didRotate:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

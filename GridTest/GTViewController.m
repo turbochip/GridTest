@@ -19,7 +19,34 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(didRotate:)
+                                                 name:UIDeviceOrientationDidChangeNotification
+                                               object:nil];
+    [self drawGrid];
+    [self.Table setRedraw:YES];
+}
+
+-(void)didRotate:(NSNotification *)notification
+{
+    UIInterfaceOrientation newOrientation =  [UIApplication sharedApplication].statusBarOrientation;
+    if ((newOrientation == UIInterfaceOrientationLandscapeLeft || newOrientation == UIInterfaceOrientationLandscapeRight))
+    {
+        [self drawGrid];
+    }
+    else if (newOrientation == UIInterfaceOrientationPortrait || newOrientation == UIInterfaceOrientationPortraitUpsideDown)
+    {
+        [self drawGrid];
+    }
+    [self.Table setRedraw:YES];
+}
+
+- (void) drawGrid
+{
+    for (UIView *sv in self.Table.subviews)
+         [sv removeFromSuperview];
+    self.Table.cell=nil;
     //Getter for tgrid alloc/init's it here
     // now set the three required parameters.
     //set size to the size of the table bounds.
@@ -39,15 +66,16 @@
             // get the location of the rectangle for the cell.
             CGRect nrect=[self.tgrid frameOfCellAtRow:i inColumn:j];
             UIView *tcell=[[UIView alloc] initWithFrame:nrect];
-            [self.Table addSubview:tcell];
             tcell.backgroundColor=[UIColor greenColor];
+//            [tcell drawRect:tcell.bounds];
+
+            [self.Table addSubview:tcell];
             
             // add new cell to our cell array.
             [self.Table.cell addObject:tcell];
         }
     }
     // set redraw forces a setneedsdisplay in the view.
-    [self.Table setRedraw:YES];
 }
 
 - (Grid *)tgrid
@@ -58,6 +86,7 @@
 
 - (IBAction)redrawButton:(UIButton *)sender {
     // force redraw
+    [self drawGrid];
     [self.Table setRedraw:YES];
 }
 
